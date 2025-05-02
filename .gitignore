@@ -69,3 +69,4 @@ storybook-static/
 tmp/
 temp/
 *.tmp*
+/.vs
