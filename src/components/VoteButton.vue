@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useCounter } from '../composables/useCounter';
+import { useCounter } from '@/composables/useCounter';
 
 const { count, increment, double } = useCounter();
 </script>

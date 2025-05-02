@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import VoteButton from './components/VoteButton.vue';
+import VoteButton from '@/components/VoteButton.vue';
 </script>
 
 <template>
