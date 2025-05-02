@@ -1,7 +1,9 @@
-import { ref } from 'vue';
+import { storeToRefs } from 'pinia';
+import { useCounterStore } from '../stores/counter.store';
 
 export function useCounter() {
-  const count = ref(0);
-  const increment = () => count.value++;
-  return { count, increment };
+  const store = useCounterStore();
+  const { count } = storeToRefs(store);
+  const double = () => store.count * 2;
+  return { count, increment: store.increment, double };
 }

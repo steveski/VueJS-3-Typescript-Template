@@ -1,9 +1,10 @@
 <script lang="ts" setup>
-import { ref } from 'vue';
+import { useCounter } from '../composables/useCounter';
 
-const count = ref(0);
+const { count, increment, double } = useCounter();
 </script>
 
 <template>
-  <button @click="count++">Votes: {{ count }}</button>
+  <button @click="increment()">Votes: {{ count }}</button>
+  <p>Double: {{ double() }}</p>
 </template>
