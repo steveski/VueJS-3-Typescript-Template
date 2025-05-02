@@ -1,16 +1,15 @@
 import { defineStore } from 'pinia';
+import { ref } from 'vue';
 
-export interface CounterState {
-  count: number;
-}
+export const useCounterStore = defineStore('counter', () => {
+  const count = ref(0);
 
-export const useCounterStore = defineStore('counter', {
-  state: (): CounterState => ({
-    count: 0,
-  }),
-  actions: {
-    increment(amount = 1) {
-      this.count += amount;
-    },
-  },
+  function increment(amount = 1) {
+    count.value += amount;
+  }
+
+  return {
+    count,
+    increment,
+  };
 });
