@@ -1,0 +1,16 @@
+// Variables
+$primary-color: #3498db;
+
+// Global styles
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f9f9f9;
+}
+
+// Navbar styles
+.navbar {
+  background-color: $primary-color;
+  padding: 1rem;
+  color: white;
+}
